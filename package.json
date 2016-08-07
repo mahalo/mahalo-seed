@@ -1,7 +1,7 @@
 {
   "name": "mahalo-seed",
   "description": "A boilerplate for Mahalo applications",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": {
     "name": "Markus Schmidt",
     "email": "m.schmidt@makuko.de"
@@ -26,7 +26,7 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "load-grunt-tasks": "^3.5.0",
-    "mahalo": "^0.6.0",
+    "mahalo": "^0.6.1",
     "mahalo-loader": "^0.6.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
