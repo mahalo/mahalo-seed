@@ -1,0 +1,35 @@
+{
+  "name": "mahalo-seed",
+  "description": "A boilerplate for Mahalo applications",
+  "version": "0.5.0",
+  "author": {
+    "name": "Markus Schmidt",
+    "email": "m.schmidt@makuko.de"
+  },
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "6.2.4",
+    "babel-preset-mahalo": "^0.6.0",
+    "babel-runtime": "^6.11.6",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-karma": "^2.0.0",
+    "grunt-webpack": "^1.0.14",
+    "html-loader": "^0.4.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-webpack": "^1.7.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "load-grunt-tasks": "^3.5.0",
+    "mahalo": "^0.6.0",
+    "mahalo-loader": "^0.6.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

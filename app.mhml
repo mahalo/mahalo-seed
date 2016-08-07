@@ -1,0 +1,5 @@
+<use component="./home"/>
+
+<link href="app.less" rel="stylesheet" type="text/css"/>
+
+<home path="/"></home>
