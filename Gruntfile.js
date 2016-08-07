@@ -16,7 +16,7 @@ const styleLoaderDev = 'style' + '!css?sourceMap' + '!less?sourceMap&sourceMapBa
  * 
  * Finally the protocol can be added.
  */
-const publicPath = outputPath;
+var publicPath = outputPath;
 
 if (publicPath[0] !== '/') {
     publicPath = '/' + publicPath.replace(/\\/g, '/');
