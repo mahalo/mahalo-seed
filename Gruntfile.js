@@ -1,9 +1,10 @@
+const path = require('path');
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const webpackConfig = require('./webpack.config.js');
 const outputPath = webpackConfig.output.path;
 const styleTest = /\.(css|less)$/;
 const styleLoader = 'style!css!less';
-const styleLoaderDev = 'style' + '!css?sourceMap' + '!less?sourceMap&sourceMapBasepath=' + __dirname;
+const styleLoaderDev = 'style!css?sourceMap!less?sourceMap';
 
 /**
  * Prepare the public path for starting the app
@@ -13,22 +14,14 @@ const styleLoaderDev = 'style' + '!css?sourceMap' + '!less?sourceMap&sourceMapBa
  * On windows systems the path starts with a drive letter
  * and has to be prefixed. Also backslashes need to be
  * converted.
- * 
- * Finally the protocol can be added.
  */
-var publicPath = outputPath;
-
-if (publicPath[0] !== '/') {
-    publicPath = '/' + publicPath.replace(/\\/g, '/');
-}
-
-publicPath = encodeURI('file://' + publicPath);
+const publicPath = encodeURI('file://' + (path.sep === '/' ? outputPath : '/' + outputPath.replace(/\\/g, '/')));
 
 /**
  * For hosting your app just provide your domain
  * as the public path.
  */
-// const publicPath = 'http://www.example.com';
+// const publicPath = 'http://www.example.com/assets';
 
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
@@ -53,8 +46,7 @@ module.exports = function(grunt) {
             options: {
                 webpack: webpackConfig,
                 publicPath: webpackConfig.output.publicPath,
-                contentBase: 'build/',
-                host: 'localhost'
+                contentBase: 'build'
             },
             start: {
                 inline: true,
