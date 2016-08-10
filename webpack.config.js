@@ -6,7 +6,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'build', 'assets'),
-        publicPath: 'http://localhost:8080/assets',
+        publicPath: 'http://localhost:8080/assets/',
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
     },

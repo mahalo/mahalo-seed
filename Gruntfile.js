@@ -15,13 +15,13 @@ const styleLoaderDev = 'style!css?sourceMap!less?sourceMap';
  * and has to be prefixed. Also backslashes need to be
  * converted.
  */
-const publicPath = encodeURI('file://' + (path.sep === '/' ? outputPath : '/' + outputPath.replace(/\\/g, '/')));
+const publicPath = encodeURI('file://' + (path.sep === '/' ? outputPath : '/' + outputPath.replace(/\\/g, '/')) + '/');
 
 /**
  * For hosting your app just provide your domain
  * as the public path.
  */
-// const publicPath = 'http://www.example.com/assets';
+// const publicPath = 'http://www.example.com/assets/';
 
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
