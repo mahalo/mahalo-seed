@@ -16,22 +16,13 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.ts$/,
-                loader: 'babel',
-                query: {presets: ['mahalo']}
-            },
-            {
-                test: /\.mhml$/,
-                loader: 'mahalo!html'
+                test: /\.(ts|mhml)$/,
+                loader: 'mahalo'
             },
             {
                 test: /\.(svg|png|jpg|gif|woff|woff2|otf|ttf|eot)/,
                 loader: 'file'
             }
         ]
-    },
-    htmlLoader: {
-        root: __dirname,
-        removeAttributeQuotes: false
     }
 };
